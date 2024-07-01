@@ -1,6 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react"
 import SignUp from ".";
-import { useNavigate } from "react-router-dom";
 
 const navigateMock = vi.fn();
 
