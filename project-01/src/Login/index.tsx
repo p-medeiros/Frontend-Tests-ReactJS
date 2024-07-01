@@ -16,7 +16,7 @@ export default function Login() {
 
     return (
         <div className={styles.container}>
-            <h2>Sing in</h2>
+            <h2>Sign In</h2>
             <form action="" onSubmit={handleSubmit}>
                 <input type="text" placeholder="Insira seu e-mail" />
                 <input type="text" placeholder="Insira sua senha" />

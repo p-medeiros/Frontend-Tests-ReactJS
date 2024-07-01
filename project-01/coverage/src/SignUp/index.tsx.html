@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/Login/index.tsx</title>
+    <title>Code coverage report for src/SignUp/index.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/Login</a> index.tsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/SignUp</a> index.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -94,7 +94,6 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
@@ -115,13 +114,13 @@
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span></td><td class="text"><pre class="prettyprint lang-js">import { FormEvent } from 'react'
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
+import { useNavigate } from 'react-router-dom';
 import styles from './styles.module.scss'
-import { useNavigate} from 'react-router-dom';
+import { FormEvent } from 'react';
 &nbsp;
-&nbsp;
-&nbsp;
-export default function Login() {
+export default function SignUp() {
 &nbsp;
     const navigate = useNavigate()
 &nbsp;
@@ -130,15 +129,16 @@ export default function Login() {
 &nbsp;
         navigate('/dashboard')
     }
-&nbsp;
     return (
         &lt;div className={styles.container}&gt;
-            &lt;h2&gt;Sign In&lt;/h2&gt;
+            &lt;h1&gt;Cadastre-se&lt;/h1&gt;
             &lt;form action="" onSubmit={handleSubmit}&gt;
-                &lt;input type="text" placeholder="Insira seu e-mail" /&gt;
-                &lt;input type="text" placeholder="Insira sua senha" /&gt;
-                &lt;button&gt;Login&lt;/button&gt;
+                &lt;input type="text" placeholder="Insira o seu nome" /&gt;
+                &lt;input type="text" placeholder="Insira o seu e_mail" /&gt;
+                &lt;input type="text" placeholder="Insira a senha" /&gt;
+                &lt;button&gt; Sign Up&lt;/button&gt;
             &lt;/form&gt;
+&nbsp;
         &lt;/div&gt;
     )
 }</pre></td></tr></table></pre>

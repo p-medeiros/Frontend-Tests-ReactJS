@@ -1,13 +1,22 @@
-import { render, screen } from "@testing-library/react"
+import { fireEvent, render, screen } from "@testing-library/react"
 import Login from ".";
+import { useNavigate } from "react-router-dom";
+
+const navigateMock = vi.fn();
+
 
 describe ("Testa o Componente de Login", ()=> {
+    vi.mock("react-router-dom", ()=> ({
+        useNavigate(){
+            return navigateMock;
+        },
+    }));
 
     test("Deve haver um titulo escito 'Sing In' ", async ()=>{
         render (<Login/>)
 
         const title = await screen.findByRole("heading", {
-            name: "Sing in"
+            name: "Sign In"
         });
 
         expect(title).toBeInTheDocument()
@@ -41,6 +50,16 @@ describe ("Testa o Componente de Login", ()=> {
         // console.log(inputs);
 
         expect(inputs).toBeInTheDocument();
+
+    })
+
+    test("Deve haver um input para email  ", async ()=>{
+        render (<Login/>)
+
+       const button = await screen.findByRole("button");
+       fireEvent.click(button)
+
+       expect(navigateMock).toHaveBeenCalledTimes(1);
 
     })
 
