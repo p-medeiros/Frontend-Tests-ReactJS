@@ -9,6 +9,7 @@ describe ("Testa o Componente de Login", ()=> {
         useNavigate(){
             return navigateMock;
         },
+        Link: vi.fn().mockImplementation((props)=> props.children)
     }));
 
     test("Deve haver um titulo escito 'Sing In' ", async ()=>{
@@ -61,6 +62,14 @@ describe ("Testa o Componente de Login", ()=> {
        expect(navigateMock).toHaveBeenCalledTimes(1);
 
     })
+
+    test("deve haver um ling poara login", async ()=>{
+        render (<Login/>)
+
+        const link = screen.getAllByText('Não tem cadastro? Clique aqui')
+
+        expect(link).toBeInTheDocument
+    } )
 
 }
 )
