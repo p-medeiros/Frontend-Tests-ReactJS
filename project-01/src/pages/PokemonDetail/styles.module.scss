@@ -6,17 +6,6 @@
     padding: 32px;
 
     width: 100vw;
-
-
-}
-
-.container-pokemons {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 16px;
-
-    list-style: none;
-
     li {
         display: flex;
         flex-direction: column;
@@ -31,7 +20,6 @@
 
         cursor: pointer;
     }
-
     h1 {
         font-size: 32px;
     } 
@@ -39,4 +27,13 @@
     img{
         width: 200px;
     }
+}
+
+.container-pokemons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 16px;
+
+    list-style: none
+    
 }
