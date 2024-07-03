@@ -20,7 +20,7 @@ export default function Login() {
         <div className={styles.container}>
             <form action="" onSubmit={handleSubmit}>
                 <h2>Sign In</h2>
-                <input type="text" placeholder="Insira seu e-mail" />
+                <input id="email" type="text" placeholder="Insira seu e-mail" />
                 <input type="text" placeholder="Insira sua senha" />
                 <button>Login</button>
                 <Link to='/sign-up'>Não tem cadastro? Clique aqui</Link>
